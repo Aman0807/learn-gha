@@ -35,3 +35,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+  log1:
+    needs: build
+    steps:
+      - run: echo "Ref - ${{ needs.outputs.ref }}"
