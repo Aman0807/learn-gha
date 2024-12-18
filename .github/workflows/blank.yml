@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - run: echo "Ref - ${{ needs.build.outputs.ref }}"
+      - run: echo "Ref - ${{ steps.build.outputs.ref }}"
 
   log2:
     runs-on: ubuntu-latest
