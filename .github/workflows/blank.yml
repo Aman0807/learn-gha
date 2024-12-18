@@ -45,7 +45,7 @@ jobs:
 
   log2:
     runs-on: ubuntu-latest
-    needs: log1
+    needs: [build, log1] 
     steps:
       - run: echo Ref - ${{ needs.outputs.ref }}
 
